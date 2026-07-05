@@ -21,6 +21,11 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (form.password !== form.confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
     console.log(form);
     alert("Registration Successful");
     setTimeout(() => {
@@ -29,66 +34,70 @@ const Register = () => {
   };
 
   return (
-    <div className="justify-center items-center px-80  rounded-lg mt-10max-w-md mx-auto">
-      <h2 className="text-3xl font-semibold">Create Account</h2>
+    <div className="flex justify-center items-center px-4 sm:px-8 lg:px-0 mt-10">
+      <div className="w-full max-w-md md:max-w-lg lg:max-w-xl">
+        <h2 className="text-3xl font-semibold text-center mb-6">
+          Create Account
+        </h2>
 
-      <div className="shadow-lg bg-gray-200">
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            name="full name"
-            placeholder="Surname"
-            onChange={handlChange}
-            className="w-full border p-3 rounded"
-          />
+        <div className="shadow-lg bg-gray-200 rounded-lg p-6">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              type="text"
+              name="surName"
+              placeholder="Surname"
+              onChange={handlChange}
+              className="w-full border p-3 rounded"
+            />
 
-          <input
-            type="text"
-            name="full name"
-            placeholder="Middle Name"
-            onChange={handlChange}
-            className="w-full border p-3 rounded "
-          />
+            <input
+              type="text"
+              name="middleName"
+              placeholder="Middle Name"
+              onChange={handlChange}
+              className="w-full border p-3 rounded"
+            />
 
-          <input
-            type="text"
-            name="email"
-            placeholder="Email"
-            onChange={handlChange}
-            className="w-full border p-3 rounded"
-          />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              onChange={handlChange}
+              className="w-full border p-3 rounded"
+            />
 
-          <input
-            type="text"
-            name="phone number"
-            placeholder="Enter Your Phone number"
-            onChange={handlChange}
-            className="w-full border p-3 rounded"
-          />
+            <input
+              type="tel"
+              name="phoneNumber"
+              placeholder="Enter Your Phone Number"
+              onChange={handlChange}
+              className="w-full border p-3 rounded"
+            />
 
-          <input
-            type="text"
-            name="password"
-            placeholder="Password"
-            onChange={handlChange}
-            className="w-full border p-3 rounded"
-          />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              onChange={handlChange}
+              className="w-full border p-3 rounded"
+            />
 
-          <input
-            type="text"
-            name="confirm password"
-            placeholder="Confirm Password"
-            onChange={handlChange}
-            className="w-full border p-3 rounded"
-          />
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="confirm Password"
+              onChange={handlChange}
+              className="w-full border p-3 rounded"
+            />
 
-          <button
-            type="submit"
-            className=" bg-green-500 py-4 px-4 rounded-lg border hover:bg-green-800 text-white font-semibold"
-          >
-            Submit
-          </button>
-        </form>
+            <button
+              type="submit"
+              className="w-full bg-green-500 py-3 rounded-lg hover:bg-green-800 text-white font-semibold"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
