@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -8,6 +9,8 @@ const Register = () => {
     password: "",
     confirmPassword: "",
   });
+
+  const navigate = useNavigate();
 
   const handlChange = (e) => {
     setForm({
@@ -20,6 +23,9 @@ const Register = () => {
     e.preventDefault();
     console.log(form);
     alert("Registration Successful");
+    setTimeout(() => {
+      navigate("/");
+    }, 1000);
   };
 
   return (
