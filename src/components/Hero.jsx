@@ -38,7 +38,7 @@ const Hero = () => {
       <div>
         <button className="rounded-full shadow-lg bg-green-700 hover:bg-green-600 fixed bottom-5 right-5 p-4 animate-pulse transition-all duration-300">
           <a
-            href="https//wa.me/2349017928914"
+            href="https://wa.me/2349017928914"
             target="_blank"
             rel="noopener noreferrer"
           >
