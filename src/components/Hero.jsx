@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -33,6 +34,17 @@ const Hero = () => {
         >
           Register
         </Link>
+      </div>
+      <div>
+        <button className="rounded-full shadow-lg bg-green-700 hover:bg-green-600 fixed bottom-5 right-5 p-4 animate-pulse transition-all duration-300">
+          <a
+            href="https//wa.me/2349017928914"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp size={40} />
+          </a>
+        </button>
       </div>
     </section>
   );

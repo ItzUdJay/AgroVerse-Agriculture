@@ -6,27 +6,27 @@ const courses = [
   },
   {
     title: "Pest Control Without Chemicals",
-    desc: "Organic methods to keep your farm pest-free.",
+    des: "Organic methods to keep your farm pest-free.",
     duration: "1.5 hours",
   },
   {
     title: "Irrigation Techniques",
-    desc: "Efficient water management for small and large farms.",
+    des: "Efficient water management for small and large farms.",
     duration: "3 hours",
   },
   {
     title: "Poultry Rearing 101",
-    desc: "Everything you need to start your own poultry farm.",
+    des: "Everything you need to start your own poultry farm.",
     duration: "4 hours",
   },
   {
     title: "Crop Rotation Planning",
-    desc: "Maximize your land's potential with smart rotation.",
+    des: "Maximize your land's potential with smart rotation.",
     duration: "1 hour",
   },
   {
     title: "Harvest & Post-Harvest Handling",
-    desc: "Reduce waste and increase profit after harvest.",
+    des: "Reduce waste and increase profit after harvest.",
     duration: "2.5 hours",
   },
 ];
@@ -48,7 +48,7 @@ const Learn = () => {
             className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition border-t-4 border-green-500"
           >
             <h3 className="text-xl font-bold">{course.title}</h3>
-            <p className="text-gray-500 text-sm mt-2">{course.desc}</p>
+            <p className="text-gray-500 text-sm mt-2">{course.des}</p>
             <div className="flex justify-between items-center mt-4">
               <span className="text-2xl text-yellow-800">
                 {course.duration}
